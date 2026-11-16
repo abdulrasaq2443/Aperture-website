@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment received | Aperture</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#F6F5F0;color:#1B1B1B;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
+.box{max-width:380px}
+.tick{width:72px;height:72px;border-radius:50%;background:#1A7A3C;color:#fff;font-size:40px;line-height:72px;margin:0 auto 18px}
+h1{font-size:24px;margin:0 0 8px}p{color:#6B6B66;line-height:1.5}
+a.btn{display:block;background:#1A7A3C;color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;margin-top:22px}
+</style></head><body><div class="box">
+<div class="tick">&#10003;</div>
+<h1>Payment received</h1>
+<p>Thank you. Tap the button to go back to Aperture. Your plan will be active in a few seconds.</p>
+<a class="btn" href="aperture://paid">Open Aperture</a>
+</div>
+<script>setTimeout(function(){location.href="aperture://paid"},800);</script>
+</body></html>
