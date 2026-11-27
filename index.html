@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aperture: find any photo by what is in it</title>
+<title>Aperture: Your memories, understood</title>
 <meta name="description" content="Aperture is a smart gallery app for Android. It reads your photos, writes a description for each, and lets you search by what is inside, including receipts, passports and NIN slips.">
 <meta name="theme-color" content="#F7F6F2">
 <meta property="og:title" content="Aperture: Smart Photo Gallery">
@@ -11,36 +11,40 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%231A7A3C' stroke-width='2.5'/%3E%3Ccircle cx='20' cy='20' r='6' fill='%231A7A3C'/%3E%3C/svg%3E">
 <script>
+document.documentElement.classList.add('js');
 /* Old app versions link to /#privacy etc. Send them to the real pages. */
 (function(){var m={"#privacy":"/privacy.html","#terms":"/terms.html","#refund":"/refund.html","#delete-account":"/delete-account.html"};if(m[location.hash])location.replace(m[location.hash]);})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body id="top">
+<div class="progress" aria-hidden="true"></div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="/">
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7" fill="currentColor" opacity=".15"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7" fill="currentColor" opacity=".15"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/><line x1="20" y1="2" x2="20" y2="8" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="20" y2="38" stroke="currentColor" stroke-width="2"/><line x1="2" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="2"/><line x1="32" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="2"/></svg>
       Aperture
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#how">How it works</a><a href="#documents">Documents</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-primary" href="#download">Get the app</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
   </div>
 </header>
 
 <main>
 <section class="hero">
-  <div class="wrap">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-grid">
     <div>
-      <span class="pill"><i></i>Smart photo gallery for Android</span>
-      <h1>Your memories, <em>understood.</em></h1>
-      <p class="lead">Aperture sees what is inside your photos, not just when they were taken. Search in plain words, and find that ID, receipt or slip in seconds. Your originals always stay in your own gallery.</p>
+      <span class="kicker"><i></i>AI-powered photo intelligence</span>
+      <h1>Your memories,<br><em>understood.</em></h1>
+      <p class="lead">Aperture sees what is inside your photos, not just when they were taken. Search by content, mood or colour, and find that ID, receipt or slip in seconds. Your originals always stay in your own gallery.</p>
       <div class="cta">
         <a class="btn btn-primary btn-lg" href="#download">Start free trial</a>
         <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
@@ -51,20 +55,35 @@
         <li>45-day free trial</li>
       </ul>
     </div>
-    <div class="phone" aria-hidden="true">
-      <div class="screen">
-        <div class="search">&#128269; Try &ldquo;receipt&rdquo;, &ldquo;my passport&rdquo;&hellip;</div>
-        <div class="chips"><span class="chip on">All photos</span><span class="chip">You (24)</span><span class="chip red">Documents (6)</span></div>
-        <div class="tiles">
-          <div class="tile t1"><span>Mountains, lake</span></div>
-          <div class="tile t4 doc"><span>Document</span></div>
-          <div class="tile t2"><span>Sunset, beach</span></div>
-          <div class="tile t5"><span>Flowers</span></div>
-          <div class="tile t3"><span>Road, autumn</span></div>
-          <div class="tile t4 doc"><span>Document</span></div>
-          <div class="tile t6"><span>Architecture</span></div>
-          <div class="tile t2"><span>Family dinner</span></div>
-          <div class="tile t1"><span>Market, fruit</span></div>
+
+    <div class="float">
+      <div class="preview">
+        <div class="pbar"><span class="dots"><i></i><i></i><i></i></span><span class="purl">Aperture &middot; My photos</span></div>
+        <div class="pbody">
+          <div class="pside">
+            <b>Aperture</b>
+            <span class="on">All photos</span><span>Camera</span><span>Screenshots</span><span>WhatsApp</span>
+            <em>YOUR SPACE</em>
+            <span>On device</span><span class="rd">Documents (3)</span>
+          </div>
+          <div class="pmain">
+            <label class="psearch">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input id="demoSearch" type="text" placeholder="Try &ldquo;receipt&rdquo;, &ldquo;beach&rdquo;, &ldquo;passport&rdquo;&hellip;" aria-label="Try the search on these sample photos" autocomplete="off" spellcheck="false">
+            </label>
+            <div class="pgrid" id="demoGrid">
+              <div class="tile t1" data-tags="mountains lake nature hiking"><span>Mountains &middot; lake</span></div>
+              <div class="tile t2" data-tags="sunset beach sea sky"><span>Sunset &middot; beach</span></div>
+              <div class="tile t3" data-tags="road autumn trees travel"><span>Road &middot; autumn</span></div>
+              <div class="tile t4 doc" data-tags="passport id document travel"><span>Passport</span></div>
+              <div class="tile t5" data-tags="flowers garden sunlight"><span>Flowers</span></div>
+              <div class="tile t6" data-tags="architecture building blue city"><span>Architecture</span></div>
+              <div class="tile t4 doc" data-tags="receipt shop document"><span>Receipt</span></div>
+              <div class="tile t2" data-tags="family dinner food table"><span>Family dinner</span></div>
+              <div class="tile t4 doc" data-tags="nin slip id document"><span>NIN slip</span></div>
+            </div>
+            <p class="phint" id="demoHint" aria-live="polite">Type to search these sample photos.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -73,93 +92,107 @@
 
 <section class="sec alt" id="features">
   <div class="wrap">
-    <div class="cards">
-      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Search by what is inside</h3><p>Type &ldquo;my passport&rdquo;, &ldquo;beach sunset&rdquo; or &ldquo;beard&rdquo;. Plurals and small spelling slips still work.</p></div>
-      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Private by design</h3><p>Your originals stay in your gallery. A small copy is analysed and deleted right after.</p></div>
-      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Automatic descriptions</h3><p>No manual labelling. Aperture works quietly in the background so every photo is findable.</p></div>
-      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Find photos of you</h3><p>Add a selfie and Aperture shows the photos you are in. Face data stays on your phone.</p></div>
+    <div class="cards" data-stagger>
+      <div class="card rv"><div class="ico amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Search by content</h3><p>Ask for &ldquo;my passport&rdquo;, &ldquo;sunset at the beach&rdquo; or &ldquo;beard&rdquo; and actually find them. Plurals and small spelling slips still work.</p></div>
+      <div class="card rv"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Private by design</h3><p>Your originals stay in your gallery. A small copy is analysed and deleted right after.</p></div>
+      <div class="card rv"><div class="ico blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Automatic descriptions</h3><p>No manual labelling. Aperture works quietly in the background so every photo is findable when you need it.</p></div>
+      <div class="card rv"><div class="ico purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Find photos of you</h3><p>Add a selfie and Aperture shows the photos you are in. Face data stays on your phone.</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="how">
   <div class="wrap">
-    <span class="pill"><i></i>How it works</span>
-    <h2>From a full gallery to <em>found in seconds.</em></h2>
-    <p class="sec-lead">Four steps. You do the first two once, and Aperture does the rest in the background.</p>
-    <div class="cards">
-      <div class="card"><div class="n">1</div><h3>Create your account</h3><p>Sign up with your email and confirm it with a 6-digit code.</p></div>
-      <div class="card"><div class="n">2</div><h3>Allow your gallery</h3><p>Start the free trial, then let Aperture see your photos.</p></div>
-      <div class="card"><div class="n">3</div><h3>Aperture reads each photo</h3><p>A small copy is analysed and described, then deleted from our server.</p></div>
-      <div class="card"><div class="n">4</div><h3>Search in plain words</h3><p>Type what you remember. The photo opens straight from your gallery.</p></div>
+    <div class="sec-head rv">
+      <span class="kicker"><i></i>How it works</span>
+      <h2>From a full gallery to <em>found in seconds.</em></h2>
+      <p class="sec-lead">Four steps. You do the first two once, and Aperture does the rest in the background.</p>
+    </div>
+    <div class="cards steps" data-stagger>
+      <div class="card rv"><div class="n">1</div><h3>Create your account</h3><p>Sign up with your email and confirm it with a 6-digit code.</p></div>
+      <div class="card rv"><div class="n">2</div><h3>Allow your gallery</h3><p>Start the free trial, then let Aperture see your photos.</p></div>
+      <div class="card rv"><div class="n">3</div><h3>Aperture reads each photo</h3><p>A small copy is analysed and described, then deleted from our server.</p></div>
+      <div class="card rv"><div class="n">4</div><h3>Search in plain words</h3><p>Type what you remember. The photo opens straight from your gallery.</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec alt" id="documents">
   <div class="wrap two">
-    <div>
-      <span class="pill"><i></i>Documents</span>
+    <div class="text rv">
+      <span class="kicker"><i></i>Documents</span>
       <h2>Your important papers, <em>one search away.</em></h2>
-      <p class="sec-lead" style="margin-bottom:0">Photos of IDs and receipts get lost among holiday pictures. Aperture marks them in red and reads the text on them, so you can find them by what they say.</p>
+      <p class="sec-lead">Photos of IDs and receipts get lost among holiday pictures. Aperture marks them in red and reads the text on them, so you can find them by what they say.</p>
       <ul class="checks">
         <li>Finds text printed on documents, even when the photo is tilted.</li>
         <li>Marks documents in red so they stand apart from normal photos.</li>
         <li>Descriptions can be wrong sometimes. You can edit them or report a mistake.</li>
       </ul>
     </div>
-    <div class="docs">
-      <div class="doc-item"><strong>NIN slip</strong><span>National ID number, full name, date of birth</span></div>
-      <div class="doc-item"><strong>Passport</strong><span>Photo page, passport number, expiry date</span></div>
-      <div class="doc-item"><strong>Receipt</strong><span>Shop name, items, total paid</span></div>
-      <div class="doc-item"><strong>Certificates</strong><span>Birth certificate, state of origin and more</span></div>
+    <div class="docs" data-stagger>
+      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg></div><div><strong>NIN slip</strong><span>National ID number, full name, date of birth</span></div></div>
+      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M8 17h8"/></svg></div><div><strong>Passport</strong><span>Photo page, passport number, expiry date</span></div></div>
+      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></div><div><strong>Receipt</strong><span>Shop name, items, total paid</span></div></div>
+      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><div><strong>Certificates and more</strong><span>Birth certificate, state of origin, letters and forms</span></div></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="pricing">
   <div class="wrap">
-    <span class="pill"><i></i>Pricing</span>
-    <h2>Simple pricing, <em>no surprises.</em></h2>
-    <p class="sec-lead">One fixed price per currency. Payments are handled securely by Paystack, and card fees are shown before you pay.</p>
-    <div class="prices">
-      <div class="price">
-        <h3>Free trial</h3>
-        <div class="amt">45 <small>days</small></div>
-        <p style="color:var(--ink2)">Or 15 searches, whichever ends first</p>
-        <ul><li>Full scanning and search</li><li>Document detection</li><li>No card needed</li></ul>
-        <a class="btn btn-ghost" href="#download">Start free trial</a>
-      </div>
-      <div class="price feat">
-        <span class="badge">Founding member</span>
-        <h3>Aperture Plus</h3>
-        <div class="amt">&#8358;1,000 <small>/ 2 months</small></div>
-        <p style="color:var(--ink2)">or $1 for 2 months in US dollars</p>
-        <ul><li>New members who skip the trial get 3 months on their first payment</li><li>Every other payment gives 2 months from the day you pay</li><li>Unlimited search and scanning</li></ul>
-        <a class="btn btn-primary" href="#download">Become a member</a>
+    <div class="sec-head rv">
+      <span class="kicker"><i></i>Pricing</span>
+      <h2>Simple pricing, <em>no surprises.</em></h2>
+      <p class="sec-lead">One fixed price per currency. Payments are handled securely by Paystack, and card fees are shown before you pay.</p>
+    </div>
+    <div class="center rv">
+      <div class="toggle" role="group" aria-label="Currency">
+        <button class="on" data-cur="ngn" aria-pressed="true">&#8358; Naira</button>
+        <button data-cur="usd" aria-pressed="false">$ US dollars</button>
       </div>
     </div>
-    <p class="fine">Plans do not renew by themselves, so nothing is charged again unless you choose to pay. See the <a href="/refund.html">refund policy</a>.</p>
+    <div class="prices" data-stagger>
+      <div class="price rv">
+        <h3>Free trial</h3>
+        <div class="amt">45 <small>days</small></div>
+        <p class="palt">Or 15 searches, whichever ends first</p>
+        <ul><li>Full scanning and search</li><li>Document detection</li><li>No card needed</li></ul>
+        <a class="btn btn-ghost btn-lg" href="#download">Start free trial</a>
+      </div>
+      <div class="price feat rv">
+        <span class="badge">Founding member</span>
+        <h3>Aperture Plus</h3>
+        <div class="amt"><span data-ngn="&#8358;1,000" data-usd="$1">&#8358;1,000</span> <small>/ 2 months</small></div>
+        <p class="palt">Nigerian cards pay in naira. Other cards can pay in US dollars.</p>
+        <ul><li>New members who skip the trial get 3 months on their first payment</li><li>Every other payment gives 2 months from the day you pay</li><li>Unlimited search and scanning</li></ul>
+        <a class="btn btn-primary btn-lg" href="#download">Become a member</a>
+      </div>
+    </div>
+    <p class="fine rv">Plans do not renew by themselves, so nothing is charged again unless you choose to pay. See the <a href="/refund.html">refund policy</a>.</p>
   </div>
 </section>
 
 <section class="sec alt" id="download">
   <div class="wrap">
-    <div class="band">
+    <div class="band rv">
       <div>
         <h2>Get Aperture on <em>Android.</em></h2>
         <p>Aperture is being tested with a small group before the public release. Ask for early access and we will send you the download link first.</p>
         <a class="btn btn-white btn-lg" href="mailto:agbajeabdulrasaq03@gmail.com?subject=Aperture%20early%20access">Ask for early access</a>
         <small>iPhone version planned for later.</small>
       </div>
-      <div class="phone" aria-hidden="true" style="width:min(220px,60vw)">
-        <div class="screen" style="min-height:330px">
-          <div class="search">&#128269; my passport</div>
-          <div class="tiles" style="grid-template-columns:repeat(2,1fr)">
-            <div class="tile t4 doc"><span>Document</span></div>
-            <div class="tile t2"><span>Sunset, beach</span></div>
-            <div class="tile t1"><span>Mountains</span></div>
-            <div class="tile t5"><span>Flowers</span></div>
+      <div class="float">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-in">
+            <div class="psearch"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>my passport</div>
+            <div class="pgrid">
+              <div class="tile t4 doc hit"><span>Passport</span></div>
+              <div class="tile t2 dim"><span>Sunset &middot; beach</span></div>
+              <div class="tile t1 dim"><span>Mountains</span></div>
+              <div class="tile t5 dim"><span>Flowers</span></div>
+              <div class="tile t6 dim"><span>Architecture</span></div>
+              <div class="tile t3 dim"><span>Road &middot; autumn</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -169,16 +202,18 @@
 
 <section class="sec" id="about">
   <div class="wrap">
-    <span class="pill"><i></i>About</span>
-    <h2>Built by one person, <em>for everyday problems.</em></h2>
-    <p class="sec-lead">Most of us have thousands of photos and no way to find the one we need. In Nigeria it is often a document: an ID, a receipt, a slip sent on WhatsApp.</p>
-    <div class="about">
+    <div class="sec-head rv">
+      <span class="kicker"><i></i>About</span>
+      <h2>Built by one person, <em>for everyday problems.</em></h2>
+      <p class="sec-lead">Most of us have thousands of photos and no way to find the one we need. In Nigeria it is often a document: an ID, a receipt, a slip sent on WhatsApp.</p>
+    </div>
+    <div class="about rv">
       <div>
-        <img class="about-photo" src="/founder.jpg" alt="Abdulrasaq Agbaje, founder of Aperture" width="220" height="275" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img class="about-photo" src="/founder.jpg" alt="Abdulrasaq Agbaje, founder of Aperture" width="240" height="300" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="avatar" aria-hidden="true">A</div>
       </div>
       <div>
-        <h3 style="font-size:1.7rem">Abdulrasaq Agbaje</h3>
+        <h3>Abdulrasaq Agbaje</h3>
         <div class="role">Founder and builder of Aperture</div>
         <p>I am a full-stack developer, designer and AI engineer. I build intelligent products that hold up as they grow, from carefully finished interfaces to production-ready machine learning.</p>
         <p>Aperture is my first product. I am building it in the open and listening closely to the people who use it, so tell me what works and what does not.</p>
@@ -191,10 +226,12 @@
 
 <section class="sec alt" id="faq">
   <div class="wrap">
-    <span class="pill"><i></i>FAQ</span>
-    <h2>Questions people ask <em>first.</em></h2>
-    <p class="sec-lead">Anything else? Email <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
-    <div class="faq">
+    <div class="sec-head rv">
+      <span class="kicker"><i></i>FAQ</span>
+      <h2>Questions people ask <em>first.</em></h2>
+      <p class="sec-lead">Anything else? Email <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
+    </div>
+    <div class="faq rv">
       <details><summary>Do my photos leave my phone?</summary><p>Your originals stay in your phone&rsquo;s gallery. To describe a photo, the app sends a small, shrunk copy to our secure server. The server analyses it, returns the description and deletes the copy. The text description is saved to your account so it can be restored if you reinstall.</p></details>
       <details><summary>Which phones does it work on?</summary><p>Android first. An iPhone version is planned for later.</p></details>
       <details><summary>Can it read Google Photos?</summary><p>Not yet. Aperture scans the photos in your phone gallery, which usually includes your backed-up Google Photos. An optional Google Photos import may come after launch.</p></details>
@@ -210,12 +247,15 @@
 
 <footer class="footer">
   <div class="wrap">
-    <a class="logo" href="/"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
+    <a class="logo" href="#top"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
     <nav aria-label="Legal">
       <a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/refund.html">Refund policy</a><a href="/delete-account.html">Delete your account</a><a href="mailto:agbajeabdulrasaq03@gmail.com">Contact</a>
     </nav>
     <small>&copy; 2026 Aperture. Made in Nigeria.</small>
   </div>
 </footer>
+
+<button class="backtop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg></button>
+<script src="/site.js" defer></script>
 </body>
 </html>
