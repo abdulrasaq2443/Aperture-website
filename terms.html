@@ -13,47 +13,105 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="/"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
-</div></header>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7" fill="currentColor" opacity=".15"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/><line x1="20" y1="2" x2="20" y2="8" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="20" y2="38" stroke="currentColor" stroke-width="2"/><line x1="2" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="2"/><line x1="32" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="2"/></svg>
+      Aperture
+    </a>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-shine nav-cta" href="/#download">Get the app</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span><span></span><span></span></button>
+      <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
+        <p class="menu-label">Explore</p>
+        <a class="m" style="--i:1" href="/">Home</a>
+        <a class="m" style="--i:2" href="/#how">How it works</a>
+        <a class="m" style="--i:3" href="/#documents">Documents</a>
+        <a class="m" style="--i:4" href="/#pricing">Pricing</a>
+        <a class="m" style="--i:5" href="/#about">About</a>
+        <a class="m" style="--i:6" href="/#faq">FAQ</a>
+        <p class="menu-label">Legal and help</p>
+        <a class="m" style="--i:7" href="/privacy.html">Privacy policy</a>
+        <a class="m active" style="--i:8" href="/terms.html">Terms of use</a>
+        <a class="m" style="--i:9" href="/refund.html">Refund policy</a>
+        <a class="m" style="--i:10" href="/delete-account.html">Delete your account</a>
+        <a class="m" style="--i:11" href="mailto:agbajeabdulrasaq03@gmail.com">Contact</a>
+        <a class="btn btn-primary btn-shine menu-cta" href="/#download">Get the app</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
 
 <main class="doc"><div class="wrap">
-<h1>Terms of use</h1>
-<p class="date">Last updated: 25 November 2026</p>
-
-<p>By creating an account or using Aperture you agree to these terms. If you do not agree, please do not use the app.</p>
-
-<h2>The service</h2>
-<p>Aperture analyses photos you choose to scan, writes descriptions and keywords, and lets you search them. Descriptions are produced by software and can be wrong. Do not rely on them for anything important, such as confirming that a document is genuine.</p>
-
-<h2>Your account</h2>
-<p>You must give a valid email address and keep your password private. You are responsible for activity on your account.</p>
-
-<h2>Your photos</h2>
-<p>You must only scan photos you have the right to use. You keep all rights to your photos. You allow us to process them temporarily to provide the service, as described in the <a href="/privacy.html">privacy policy</a>. If you use the optional &ldquo;You&rdquo; feature, only add a photo of yourself.</p>
-
-<h2>Free trial and access</h2>
-<p>New accounts get a free trial of 45 days or 15 searches, whichever ends first. After that, search and new descriptions need an active plan. Access does not renew automatically. See the <a href="/refund.html">refund policy</a> for payments made outside the app store.</p>
-
-<h2>Acceptable use</h2>
-<p>Do not use Aperture to break the law, to process images you are not allowed to have, or to attack, overload or reverse-engineer the service.</p>
-
-<h2>Availability</h2>
-<p>We work to keep Aperture running, but it is an early product and may be unavailable at times or change over time. We may update or stop features with reasonable notice.</p>
-
-<h2>Limits of liability</h2>
-<p>The app is provided &ldquo;as is&rdquo;. To the extent the law allows, we are not liable for indirect losses, or for loss caused by wrong descriptions. Our total liability for any claim is limited to the amount you paid in the previous 3 months.</p>
-
-<h2>Ending your account</h2>
-<p>You can stop using Aperture and delete your account at any time (see the <a href="/delete-account.html">account deletion page</a>). We may suspend accounts that break these terms.</p>
-
-<h2>Governing law and contact</h2>
-<p>These terms are governed by the laws of the Federal Republic of Nigeria. Contact: <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
+  <div class="doc-head">
+    <span class="kicker"><i></i>Terms of use</span>
+    <h1>The rules, <em>in plain words.</em></h1>
+    <p>By creating an account or using Aperture you agree to these terms. If you do not agree, please do not use the app.</p>
+    <p class="date">Last updated: 25 November 2026</p>
+  </div>
+  <div class="bx-grid">
+    <section class="bx">
+      <div class="no">1</div>
+      <h2>The service</h2>
+      <p>Aperture analyses photos you choose to scan, writes descriptions and keywords, and lets you search them. Descriptions are produced by software and can be wrong. Do not rely on them for anything important, such as confirming that a document is genuine.</p>
+    </section>
+    <section class="bx">
+      <div class="no">2</div>
+      <h2>Your account</h2>
+      <p>You must give a valid email address and keep your password private. You are responsible for activity on your account.</p>
+    </section>
+    <section class="bx">
+      <div class="no">3</div>
+      <h2>Your photos</h2>
+      <p>You must only scan photos you have the right to use. You keep all rights to your photos. You allow us to process them temporarily to provide the service, as described in the <a href="/privacy.html">privacy policy</a>. If you use the optional &ldquo;You&rdquo; feature, only add a photo of yourself.</p>
+    </section>
+    <section class="bx">
+      <div class="no">4</div>
+      <h2>Free trial and access</h2>
+      <p>New accounts get a free trial of 45 days or 15 searches, whichever ends first. After that, search and new descriptions need an active plan. Access does not renew automatically.</p>
+      <p>See the <a href="/refund.html">refund policy</a> for payments made outside the app store.</p>
+    </section>
+    <section class="bx">
+      <div class="no">5</div>
+      <h2>Acceptable use</h2>
+      <p>Do not use Aperture to break the law, to process images you are not allowed to have, or to attack, overload or reverse-engineer the service.</p>
+    </section>
+    <section class="bx">
+      <div class="no">6</div>
+      <h2>Availability</h2>
+      <p>We work to keep Aperture running, but it is an early product and may be unavailable at times or change over time. We may update or stop features with reasonable notice.</p>
+    </section>
+    <section class="bx">
+      <div class="no">7</div>
+      <h2>Limits of liability</h2>
+      <p>The app is provided &ldquo;as is&rdquo;. To the extent the law allows, we are not liable for indirect losses, or for loss caused by wrong descriptions. Our total liability for any claim is limited to the amount you paid in the previous 3 months.</p>
+    </section>
+    <section class="bx">
+      <div class="no">8</div>
+      <h2>Ending your account</h2>
+      <p>You can stop using Aperture and delete your account at any time (see the <a href="/delete-account.html">account deletion page</a>). We may suspend accounts that break these terms.</p>
+    </section>
+    <section class="bx wide">
+      <div class="no">9</div>
+      <h2>Governing law and contact</h2>
+      <p>These terms are governed by the laws of the Federal Republic of Nigeria.</p>
+      <p>Contact: <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
+    </section>
+  </div>
+  <div class="doc-back"><a class="btn btn-ghost btn-lg" href="/">Back to home</a></div>
 </div></main>
 
-<footer class="footer"><div class="wrap">
-  <nav aria-label="Legal"><a href="/">Home</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/refund.html">Refund policy</a><a href="/delete-account.html">Delete your account</a></nav>
-  <small>&copy; 2026 Aperture. Made in Nigeria.</small>
-</div></footer>
+<footer class="footer">
+  <div class="wrap">
+    <a class="logo" href="/"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
+    <nav aria-label="Legal">
+      <a href="/">Home</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/refund.html">Refund policy</a><a href="/delete-account.html">Delete your account</a>
+    </nav>
+    <small>&copy; 2026 Aperture. Made in Nigeria.</small>
+  </div>
+</footer>
+<button class="backtop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg></button>
+<script src="/site.js" defer></script>
 </body>
 </html>

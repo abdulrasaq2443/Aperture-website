@@ -11,7 +11,6 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%231A7A3C' stroke-width='2.5'/%3E%3Ccircle cx='20' cy='20' r='6' fill='%231A7A3C'/%3E%3C/svg%3E">
 <script>
-document.documentElement.classList.add('js');
 /* Old app versions link to /#privacy etc. Send them to the real pages. */
 (function(){var m={"#privacy":"/privacy.html","#terms":"/terms.html","#refund":"/refund.html","#delete-account":"/delete-account.html"};if(m[location.hash])location.replace(m[location.hash]);})();
 </script>
@@ -21,21 +20,36 @@ document.documentElement.classList.add('js');
 <link rel="stylesheet" href="/style.css">
 </head>
 <body id="top">
-<div class="progress" aria-hidden="true"></div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top">
+    <a class="logo" href="/">
       <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7" fill="currentColor" opacity=".15"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/><line x1="20" y1="2" x2="20" y2="8" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="20" y2="38" stroke="currentColor" stroke-width="2"/><line x1="2" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="2"/><line x1="32" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="2"/></svg>
       Aperture
     </a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="#how">How it works</a><a href="#documents">Documents</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#faq">FAQ</a>
-    </nav>
-    <a class="btn btn-primary" href="#download">Get the app</a>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-shine nav-cta" href="/#download">Get the app</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span><span></span><span></span></button>
+      <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
+        <p class="menu-label">Explore</p>
+        <a class="m" style="--i:1" href="/">Home</a>
+        <a class="m" style="--i:2" href="/#how" data-sec="how">How it works</a>
+        <a class="m" style="--i:3" href="/#documents" data-sec="documents">Documents</a>
+        <a class="m" style="--i:4" href="/#pricing" data-sec="pricing">Pricing</a>
+        <a class="m" style="--i:5" href="/#about" data-sec="about">About</a>
+        <a class="m" style="--i:6" href="/#faq" data-sec="faq">FAQ</a>
+        <p class="menu-label">Legal and help</p>
+        <a class="m" style="--i:7" href="/privacy.html">Privacy policy</a>
+        <a class="m" style="--i:8" href="/terms.html">Terms of use</a>
+        <a class="m" style="--i:9" href="/refund.html">Refund policy</a>
+        <a class="m" style="--i:10" href="/delete-account.html">Delete your account</a>
+        <a class="m" style="--i:11" href="mailto:agbajeabdulrasaq03@gmail.com">Contact</a>
+        <a class="btn btn-primary btn-shine menu-cta" href="/#download">Get the app</a>
+      </nav>
+    </div>
   </div>
 </header>
+<div class="scrim" id="scrim"></div>
 
 <main>
 <section class="hero">
@@ -46,8 +60,8 @@ document.documentElement.classList.add('js');
       <h1>Your memories,<br><em>understood.</em></h1>
       <p class="lead">Aperture sees what is inside your photos, not just when they were taken. Search by content, mood or colour, and find that ID, receipt or slip in seconds. Your originals always stay in your own gallery.</p>
       <div class="cta">
-        <a class="btn btn-primary btn-lg" href="#download">Start free trial</a>
-        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+        <a class="btn btn-primary btn-lg" href="/#download">Start free trial</a>
+        <a class="btn btn-ghost btn-lg" href="/#how">See how it works</a>
       </div>
       <ul class="trust">
         <li>Photos deleted after analysis</li>
@@ -92,34 +106,34 @@ document.documentElement.classList.add('js');
 
 <section class="sec alt" id="features">
   <div class="wrap">
-    <div class="cards" data-stagger>
-      <div class="card rv"><div class="ico amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Search by content</h3><p>Ask for &ldquo;my passport&rdquo;, &ldquo;sunset at the beach&rdquo; or &ldquo;beard&rdquo; and actually find them. Plurals and small spelling slips still work.</p></div>
-      <div class="card rv"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Private by design</h3><p>Your originals stay in your gallery. A small copy is analysed and deleted right after.</p></div>
-      <div class="card rv"><div class="ico blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Automatic descriptions</h3><p>No manual labelling. Aperture works quietly in the background so every photo is findable when you need it.</p></div>
-      <div class="card rv"><div class="ico purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Find photos of you</h3><p>Add a selfie and Aperture shows the photos you are in. Face data stays on your phone.</p></div>
+    <div class="cards">
+      <div class="card"><div class="ico amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Search by content</h3><p>Ask for &ldquo;my passport&rdquo;, &ldquo;sunset at the beach&rdquo; or &ldquo;beard&rdquo; and actually find them. Plurals and small spelling slips still work.</p></div>
+      <div class="card"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Private by design</h3><p>Your originals stay in your gallery. A small copy is analysed and deleted right after.</p></div>
+      <div class="card"><div class="ico blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Automatic descriptions</h3><p>No manual labelling. Aperture works quietly in the background so every photo is findable when you need it.</p></div>
+      <div class="card"><div class="ico purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Find photos of you</h3><p>Add a selfie and Aperture shows the photos you are in. Face data stays on your phone.</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="how">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head">
       <span class="kicker"><i></i>How it works</span>
       <h2>From a full gallery to <em>found in seconds.</em></h2>
       <p class="sec-lead">Four steps. You do the first two once, and Aperture does the rest in the background.</p>
     </div>
-    <div class="cards steps" data-stagger>
-      <div class="card rv"><div class="n">1</div><h3>Create your account</h3><p>Sign up with your email and confirm it with a 6-digit code.</p></div>
-      <div class="card rv"><div class="n">2</div><h3>Allow your gallery</h3><p>Start the free trial, then let Aperture see your photos.</p></div>
-      <div class="card rv"><div class="n">3</div><h3>Aperture reads each photo</h3><p>A small copy is analysed and described, then deleted from our server.</p></div>
-      <div class="card rv"><div class="n">4</div><h3>Search in plain words</h3><p>Type what you remember. The photo opens straight from your gallery.</p></div>
+    <div class="cards steps">
+      <div class="card"><div class="n">1</div><h3>Create your account</h3><p>Sign up with your email and confirm it with a 6-digit code.</p></div>
+      <div class="card"><div class="n">2</div><h3>Allow your gallery</h3><p>Start the free trial, then let Aperture see your photos.</p></div>
+      <div class="card"><div class="n">3</div><h3>Aperture reads each photo</h3><p>A small copy is analysed and described, then deleted from our server.</p></div>
+      <div class="card"><div class="n">4</div><h3>Search in plain words</h3><p>Type what you remember. The photo opens straight from your gallery.</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec alt" id="documents">
   <div class="wrap two">
-    <div class="text rv">
+    <div>
       <span class="kicker"><i></i>Documents</span>
       <h2>Your important papers, <em>one search away.</em></h2>
       <p class="sec-lead">Photos of IDs and receipts get lost among holiday pictures. Aperture marks them in red and reads the text on them, so you can find them by what they say.</p>
@@ -129,56 +143,56 @@ document.documentElement.classList.add('js');
         <li>Descriptions can be wrong sometimes. You can edit them or report a mistake.</li>
       </ul>
     </div>
-    <div class="docs" data-stagger>
-      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg></div><div><strong>NIN slip</strong><span>National ID number, full name, date of birth</span></div></div>
-      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M8 17h8"/></svg></div><div><strong>Passport</strong><span>Photo page, passport number, expiry date</span></div></div>
-      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></div><div><strong>Receipt</strong><span>Shop name, items, total paid</span></div></div>
-      <div class="doc-item rv"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><div><strong>Certificates and more</strong><span>Birth certificate, state of origin, letters and forms</span></div></div>
+    <div class="docs">
+      <div class="doc-item"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg></div><div><strong>NIN slip</strong><span>National ID number, full name, date of birth</span></div></div>
+      <div class="doc-item"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M8 17h8"/></svg></div><div><strong>Passport</strong><span>Photo page, passport number, expiry date</span></div></div>
+      <div class="doc-item"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></div><div><strong>Receipt</strong><span>Shop name, items, total paid</span></div></div>
+      <div class="doc-item"><div class="doc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><div><strong>Certificates and more</strong><span>Birth certificate, state of origin, letters and forms</span></div></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="pricing">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head">
       <span class="kicker"><i></i>Pricing</span>
       <h2>Simple pricing, <em>no surprises.</em></h2>
       <p class="sec-lead">One fixed price per currency. Payments are handled securely by Paystack, and card fees are shown before you pay.</p>
     </div>
-    <div class="center rv">
+    <div class="center">
       <div class="toggle" role="group" aria-label="Currency">
         <button class="on" data-cur="ngn" aria-pressed="true">&#8358; Naira</button>
         <button data-cur="usd" aria-pressed="false">$ US dollars</button>
       </div>
     </div>
-    <div class="prices" data-stagger>
-      <div class="price rv">
+    <div class="prices">
+      <div class="price">
         <h3>Free trial</h3>
         <div class="amt">45 <small>days</small></div>
         <p class="palt">Or 15 searches, whichever ends first</p>
         <ul><li>Full scanning and search</li><li>Document detection</li><li>No card needed</li></ul>
-        <a class="btn btn-ghost btn-lg" href="#download">Start free trial</a>
+        <a class="btn btn-ghost btn-lg" href="/#download">Start free trial</a>
       </div>
-      <div class="price feat rv">
+      <div class="price feat">
         <span class="badge">Founding member</span>
         <h3>Aperture Plus</h3>
         <div class="amt"><span data-ngn="&#8358;1,000" data-usd="$1">&#8358;1,000</span> <small>/ 2 months</small></div>
         <p class="palt">Nigerian cards pay in naira. Other cards can pay in US dollars.</p>
         <ul><li>New members who skip the trial get 3 months on their first payment</li><li>Every other payment gives 2 months from the day you pay</li><li>Unlimited search and scanning</li></ul>
-        <a class="btn btn-primary btn-lg" href="#download">Become a member</a>
+        <a class="btn btn-primary btn-lg" href="/#download">Become a member</a>
       </div>
     </div>
-    <p class="fine rv">Plans do not renew by themselves, so nothing is charged again unless you choose to pay. See the <a href="/refund.html">refund policy</a>.</p>
+    <p class="fine">Plans do not renew by themselves, so nothing is charged again unless you choose to pay. See the <a href="/refund.html">refund policy</a>.</p>
   </div>
 </section>
 
 <section class="sec alt" id="download">
   <div class="wrap">
-    <div class="band rv">
+    <div class="band">
       <div>
         <h2>Get Aperture on <em>Android.</em></h2>
         <p>Aperture is being tested with a small group before the public release. Ask for early access and we will send you the download link first.</p>
-        <a class="btn btn-white btn-lg" href="mailto:agbajeabdulrasaq03@gmail.com?subject=Aperture%20early%20access">Ask for early access</a>
+        <a class="btn btn-white btn-lg btn-shine" href="mailto:agbajeabdulrasaq03@gmail.com?subject=Aperture%20early%20access">Ask for early access</a>
         <small>iPhone version planned for later.</small>
       </div>
       <div class="float">
@@ -202,14 +216,14 @@ document.documentElement.classList.add('js');
 
 <section class="sec" id="about">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head">
       <span class="kicker"><i></i>About</span>
       <h2>Built by one person, <em>for everyday problems.</em></h2>
       <p class="sec-lead">Most of us have thousands of photos and no way to find the one we need. In Nigeria it is often a document: an ID, a receipt, a slip sent on WhatsApp.</p>
     </div>
-    <div class="about rv">
+    <div class="about">
       <div>
-        <img class="about-photo" src="/founder.jpg" alt="Abdulrasaq Agbaje, founder of Aperture" width="240" height="300" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img class="about-photo" src="/founder.jpg" alt="Abdulrasaq Agbaje, founder of Aperture" width="230" height="290" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="avatar" aria-hidden="true">A</div>
       </div>
       <div>
@@ -226,12 +240,12 @@ document.documentElement.classList.add('js');
 
 <section class="sec alt" id="faq">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head">
       <span class="kicker"><i></i>FAQ</span>
       <h2>Questions people ask <em>first.</em></h2>
       <p class="sec-lead">Anything else? Email <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
     </div>
-    <div class="faq rv">
+    <div class="faq">
       <details><summary>Do my photos leave my phone?</summary><p>Your originals stay in your phone&rsquo;s gallery. To describe a photo, the app sends a small, shrunk copy to our secure server. The server analyses it, returns the description and deletes the copy. The text description is saved to your account so it can be restored if you reinstall.</p></details>
       <details><summary>Which phones does it work on?</summary><p>Android first. An iPhone version is planned for later.</p></details>
       <details><summary>Can it read Google Photos?</summary><p>Not yet. Aperture scans the photos in your phone gallery, which usually includes your backed-up Google Photos. An optional Google Photos import may come after launch.</p></details>
@@ -247,7 +261,7 @@ document.documentElement.classList.add('js');
 
 <footer class="footer">
   <div class="wrap">
-    <a class="logo" href="#top"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
+    <a class="logo" href="/"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
     <nav aria-label="Legal">
       <a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/refund.html">Refund policy</a><a href="/delete-account.html">Delete your account</a><a href="mailto:agbajeabdulrasaq03@gmail.com">Contact</a>
     </nav>

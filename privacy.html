@@ -13,61 +13,125 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="/"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
-</div></header>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7" fill="currentColor" opacity=".15"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/><line x1="20" y1="2" x2="20" y2="8" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="20" y2="38" stroke="currentColor" stroke-width="2"/><line x1="2" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="2"/><line x1="32" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="2"/></svg>
+      Aperture
+    </a>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-shine nav-cta" href="/#download">Get the app</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span><span></span><span></span></button>
+      <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
+        <p class="menu-label">Explore</p>
+        <a class="m" style="--i:1" href="/">Home</a>
+        <a class="m" style="--i:2" href="/#how">How it works</a>
+        <a class="m" style="--i:3" href="/#documents">Documents</a>
+        <a class="m" style="--i:4" href="/#pricing">Pricing</a>
+        <a class="m" style="--i:5" href="/#about">About</a>
+        <a class="m" style="--i:6" href="/#faq">FAQ</a>
+        <p class="menu-label">Legal and help</p>
+        <a class="m active" style="--i:7" href="/privacy.html">Privacy policy</a>
+        <a class="m" style="--i:8" href="/terms.html">Terms of use</a>
+        <a class="m" style="--i:9" href="/refund.html">Refund policy</a>
+        <a class="m" style="--i:10" href="/delete-account.html">Delete your account</a>
+        <a class="m" style="--i:11" href="mailto:agbajeabdulrasaq03@gmail.com">Contact</a>
+        <a class="btn btn-primary btn-shine menu-cta" href="/#download">Get the app</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
 
 <main class="doc"><div class="wrap">
-<h1>Privacy policy</h1>
-<p class="date">Last updated: 25 November 2026</p>
-
-<p>Aperture is a smart gallery app run by Abdulrasaq Agbaje, an individual based in Nigeria (&ldquo;we&rdquo;, &ldquo;us&rdquo;). This policy explains what we collect and why. Contact: <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
-
-<h2>What we collect</h2>
-<ul>
-  <li><b>Account details:</b> your email address and a password (stored securely by our authentication provider, Supabase).</li>
-  <li><b>Photo descriptions:</b> for each photo you scan, the description, keywords, category and the photo&rsquo;s file name and dimensions, saved to your account so they can be restored if you reinstall. For photos recognised as documents, only the document type, title, file name and dimensions are saved to your account.</li>
-  <li><b>Plan and payment records:</b> your plan, trial or access dates, and payment references and amounts. Card and bank details are entered on Paystack and are never seen or stored by us.</li>
-  <li><b>Search usage:</b> a count of searches, so the free trial limit can be applied.</li>
-  <li><b>Your photos, temporarily:</b> see the next section.</li>
-</ul>
-
-<h2>What happens to your photos</h2>
-<p>Your original photos stay in your phone&rsquo;s gallery. To describe a photo, the app shrinks it and sends it over an encrypted connection to our analysis server. The server reads the image (including any text on it), produces a description, keywords and a category, sends these back to your phone, and then deletes the photo. We do not keep your photos and do not use them for advertising.</p>
-<p>Descriptions are saved on your phone and to your account, as described above. Clearing the app&rsquo;s data removes the copy on your phone, and signing in again restores your descriptions.</p>
-
-<h2>Deleted photos</h2>
-<p>If a photo disappears from your gallery (for example, you move it to your phone&rsquo;s trash), Aperture hides its description at once. We keep the description for up to 30 days in case you restore the photo. After 30 days it is deleted from your phone and from your account.</p>
-
-<h2>Face data (optional &ldquo;You&rdquo; feature)</h2>
-<p>If you choose to add a photo of yourself, the app sends it to our analysis server, which turns it into a numeric face code and deletes the photo straight away. When your photos are scanned, the server also creates face codes for faces it finds in them (not for documents) and returns them to your phone. Matching happens on your phone.</p>
-<p>Face codes are kept on your phone only. We do not store them on our server or in your account. Because a face code is sensitive personal data, we only create yours with your explicit consent, and you can remove all face data at any time in Settings. If you skip this feature, no face matching is done for you. Other people may appear in your photos; their face codes are only used to compare faces on your phone, and are not stored by us.</p>
-
-<h2>Reporting a wrong description</h2>
-<p>If you choose to report a wrong description, we save the category, label and your correction as text, with your consent, to improve the app. No photo is sent with a report.</p>
-
-<h2>Who we share data with</h2>
-<p>We use trusted service providers to run Aperture: Supabase (accounts and database), Hugging Face (analysis server hosting), and Paystack (payments). We do not sell your data.</p>
-
-<h2>Google Photos</h2>
-<p>Aperture does not read your Google Photos library. If we add the optional Google Photos Picker in future, it will only receive the photos you select yourself, and this policy will be updated first.</p>
-
-<h2>Your choices and deleting your account</h2>
-<p>You can remove your face data at any time in Settings. You can delete your account in the app (Settings, then &ldquo;Delete my account&rdquo;) or by following the steps on our <a href="/delete-account.html">account deletion page</a>. We delete your account and saved descriptions; we keep payment records for as long as the law and accounting rules require.</p>
-
-<h2>Security</h2>
-<p>Connections are encrypted, access to the analysis server requires a signed-in account, and secrets are kept out of the app. No system is perfectly secure, so please use a strong password.</p>
-
-<h2>Children</h2>
-<p>Aperture is not meant for anyone under 18, and we do not knowingly collect data from children.</p>
-
-<h2>Changes</h2>
-<p>If we change this policy, we will update the date above and, for important changes, tell you in the app.</p>
+  <div class="doc-head">
+    <span class="kicker"><i></i>Privacy policy</span>
+    <h1>How we handle <em>your data.</em></h1>
+    <p>Aperture is a smart gallery app run by Abdulrasaq Agbaje, an individual based in Nigeria (&ldquo;we&rdquo;, &ldquo;us&rdquo;). This page explains what we collect and why.</p>
+    <p class="date">Last updated: 25 November 2026</p>
+  </div>
+  <div class="bx-grid">
+    <section class="bx wide">
+      <div class="no">1</div>
+      <h2>What we collect</h2>
+      <ul>
+        <li><b>Account details:</b> your email address and a password (stored securely by our authentication provider, Supabase).</li>
+        <li><b>Photo descriptions:</b> for each photo you scan, the description, keywords, category and the photo&rsquo;s file name and dimensions, saved to your account so they can be restored if you reinstall. For photos recognised as documents, only the document type, title, file name and dimensions are saved to your account.</li>
+        <li><b>Plan and payment records:</b> your plan, trial or access dates, and payment references and amounts. Card and bank details are entered on Paystack and are never seen or stored by us.</li>
+        <li><b>Search usage:</b> a count of searches, so the free trial limit can be applied.</li>
+        <li><b>Your photos, temporarily:</b> see the next box.</li>
+      </ul>
+    </section>
+    <section class="bx">
+      <div class="no">2</div>
+      <h2>What happens to your photos</h2>
+      <p>Your original photos stay in your phone&rsquo;s gallery. To describe a photo, the app shrinks it and sends it over an encrypted connection to our analysis server. The server reads the image (including any text on it), produces a description, keywords and a category, sends these back to your phone, and then deletes the photo. We do not keep your photos and do not use them for advertising.</p>
+      <p>Descriptions are saved on your phone and to your account. Clearing the app&rsquo;s data removes the copy on your phone, and signing in again restores your descriptions.</p>
+    </section>
+    <section class="bx">
+      <div class="no">3</div>
+      <h2>Deleted photos</h2>
+      <p>If a photo disappears from your gallery (for example, you move it to your phone&rsquo;s trash), Aperture hides its description at once.</p>
+      <p>We keep the description for up to 30 days in case you restore the photo. After 30 days it is deleted from your phone and from your account.</p>
+    </section>
+    <section class="bx wide">
+      <div class="no">4</div>
+      <h2>Face data (optional &ldquo;You&rdquo; feature)</h2>
+      <p>If you choose to add a photo of yourself, the app sends it to our analysis server, which turns it into a numeric face code and deletes the photo straight away. When your photos are scanned, the server also creates face codes for faces it finds in them (not for documents) and returns them to your phone. Matching happens on your phone.</p>
+      <p>Face codes are kept on your phone only. We do not store them on our server or in your account. Because a face code is sensitive personal data, we only create yours with your explicit consent, and you can remove all face data at any time in Settings. If you skip this feature, no face matching is done for you. Other people may appear in your photos; their face codes are only used to compare faces on your phone, and are not stored by us.</p>
+    </section>
+    <section class="bx">
+      <div class="no">5</div>
+      <h2>Reporting a wrong description</h2>
+      <p>If you choose to report a wrong description, we save the category, label and your correction as text, with your consent, to improve the app. No photo is sent with a report.</p>
+    </section>
+    <section class="bx">
+      <div class="no">6</div>
+      <h2>Who we share data with</h2>
+      <p>We use trusted service providers to run Aperture: Supabase (accounts and database), Hugging Face (analysis server hosting), and Paystack (payments).</p>
+      <p>We do not sell your data.</p>
+    </section>
+    <section class="bx">
+      <div class="no">7</div>
+      <h2>Google Photos</h2>
+      <p>Aperture does not read your Google Photos library. If we add the optional Google Photos Picker in future, it will only receive the photos you select yourself, and this policy will be updated first.</p>
+    </section>
+    <section class="bx">
+      <div class="no">8</div>
+      <h2>Your choices and deleting your account</h2>
+      <p>You can remove your face data at any time in Settings. You can delete your account in the app (Settings, then &ldquo;Delete my account&rdquo;) or by following the steps on our <a href="/delete-account.html">account deletion page</a>.</p>
+      <p>We delete your account and saved descriptions. We keep payment records for as long as the law and accounting rules require.</p>
+    </section>
+    <section class="bx">
+      <div class="no">9</div>
+      <h2>Security</h2>
+      <p>Connections are encrypted, access to the analysis server requires a signed-in account, and secrets are kept out of the app. No system is perfectly secure, so please use a strong password.</p>
+    </section>
+    <section class="bx">
+      <div class="no">10</div>
+      <h2>Children</h2>
+      <p>Aperture is not meant for anyone under 18, and we do not knowingly collect data from children.</p>
+    </section>
+    <section class="bx wide">
+      <div class="no">11</div>
+      <h2>Changes and contact</h2>
+      <p>If we change this policy, we will update the date above and, for important changes, tell you in the app.</p>
+      <p>Questions? Write to <a href="mailto:agbajeabdulrasaq03@gmail.com">agbajeabdulrasaq03@gmail.com</a>.</p>
+    </section>
+  </div>
+  <div class="doc-back"><a class="btn btn-ghost btn-lg" href="/">Back to home</a></div>
 </div></main>
 
-<footer class="footer"><div class="wrap">
-  <nav aria-label="Legal"><a href="/">Home</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/refund.html">Refund policy</a><a href="/delete-account.html">Delete your account</a></nav>
-  <small>&copy; 2026 Aperture. Made in Nigeria.</small>
-</div></footer>
+<footer class="footer">
+  <div class="wrap">
+    <a class="logo" href="/"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="currentColor"/></svg>Aperture</a>
+    <nav aria-label="Legal">
+      <a href="/">Home</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/refund.html">Refund policy</a><a href="/delete-account.html">Delete your account</a>
+    </nav>
+    <small>&copy; 2026 Aperture. Made in Nigeria.</small>
+  </div>
+</footer>
+<button class="backtop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg></button>
+<script src="/site.js" defer></script>
 </body>
 </html>
